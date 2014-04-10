@@ -3,14 +3,11 @@ TYPO3CMS-Reviewer
 
 This project tries to provide an easy & also quick way to review/debug/profile the TYPO3 CMS project.
 
-## Work in progress
-
-- Initial Packer Configuration
-
 
 ## Already solved Features/Tasks
 
--
+- Initial Packer Configuration
+
 
 ## Planned Features (Test Environment)
 
@@ -51,6 +48,7 @@ This project tries to provide an easy & also quick way to review/debug/profile t
 
 TODO
 
-# Author
+## Author
+
 
 Josef Florian Glatz <http://jousch.com>

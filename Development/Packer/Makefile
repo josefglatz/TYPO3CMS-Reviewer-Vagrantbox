@@ -11,7 +11,7 @@
 # Current valid values: provisionerless | chef | salt
 PROVISIONER := chef
 # Current valid values: latest | x.y.z | x.y
-PROVISIONER_VERSION :=
+PROVISIONER_VERSION := latest
 # Packer does not allow empty variables, so only pass variables that are defined
 ifdef PROVISIONER_VERSION
 	PACKER_VARS := -var 'provisioner=${PROVISIONER}' -var 'provisioner_version=$(PROVISIONER_VERSION)'
