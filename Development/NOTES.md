@@ -28,3 +28,6 @@ Development Notes
 
 - TYPO3 extension to generate PhpStorm meta data file for factory method auto completion. <https://github.com/irnnr/typo3-ext-phpstorm>
 
+# Fun/Unnecessary Stuff
+
+- <http://www.mewbies.com/how_to_customize_your_console_login_message_tutorial.htm>
