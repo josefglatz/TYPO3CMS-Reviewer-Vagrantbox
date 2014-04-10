@@ -1,6 +1,11 @@
 TYPO3VagrantTestBox
 ===================
 
+## Work in progress
+
+- Initial Packer Configuration
+- 
+
 ## Already solved Features/Tasks
 
 -
