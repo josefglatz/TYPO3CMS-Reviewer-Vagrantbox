@@ -1,6 +1,8 @@
 TYPO3CMS-Reviewer
 =================
 
+This project tries to provide an easy & also quick way to review/debug/profile the TYPO3 CMS project.
+
 ## Work in progress
 
 - Initial Packer Configuration
@@ -43,3 +45,12 @@ TYPO3CMS-Reviewer
 - default website „review.local“ like the MAMP Pro Webstart which supports
 	- easy execution of install/backup/restore scripts
 	- Mailcatcher link
+
+
+## How to use
+
+TODO
+
+# Author
+
+Josef Florian Glatz <http://jousch.com>
