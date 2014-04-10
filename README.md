@@ -7,19 +7,22 @@ This project tries to provide an easy & also quick way to review/debug/profile t
 ## Already solved Features/Tasks
 
 - Initial Packer Configuration
+	- Fedora 20 template (project's default distribution)
+		- for VMware Fusion (Apple OS X)
+		- for Virtualbox (Apple OS X, Microsoft Windows, Linux)
 
 
 ## Planned Features (Test Environment)
 
 - Preconfigured ready2use Vagrantbox
 	- for
-		- VMware Fusion (OSX)
-		- Virtualbox (OSX, Windows, Linux)
-		- (HyperV (Windows >= 8.1))
-		- (VMware Workstation (Windows)
-	- included Packer Configuration file(s) (if you want to create custom boxes)
+		- _DONE_ VMware Fusion (OSX)
+		- _DONE_ Virtualbox (OSX, Windows, Linux)
+		- (HyperV (Windows >= 8.1)) *currently not on my agenda*
+		- (VMware Workstation (Windows) *currently not on my agenda*
+	- _DONE_ included Packer Configuration file(s) (if you want to create custom boxes)
 	- included Chef Cookbooks (each of them as standalone git-repo)
-	- Fedora Linux as default
+	- _DONE_ Fedora Linux as default
 
 ## Planned Software/Configuration
 
@@ -48,7 +51,11 @@ This project tries to provide an easy & also quick way to review/debug/profile t
 
 TODO
 
+
 ## Author
 
-
 Josef Florian Glatz <http://jousch.com>
+
+## Sponsors & nice websites
+
+- [TYPO3Blog.at](http://typo3blog.at)
