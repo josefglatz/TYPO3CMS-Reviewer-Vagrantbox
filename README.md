@@ -1,17 +1,21 @@
 TYPO3VagrantTestBox
 ===================
 
+## Already solved Features/Tasks
+
+-
+
 ## Planned Features (Test Environment)
 
 - Preconfigured ready2use Vagrantbox
 	- for
 		- VMware Fusion (OSX)
 		- Virtualbox (OSX, Windows, Linux)
-		- HyperV (Windows >= 8.1)
-		- (VMware Workstation (Windows) => only if it is possible with evaluation license - because I have no license)
+		- (HyperV (Windows >= 8.1))
+		- (VMware Workstation (Windows)
 	- included Packer Configuration file(s) (if you want to create custom boxes)
 	- included Chef Cookbooks (each of them as standalone git-repo)
-	- Fedora Linux
+	- Fedora Linux as default
 
 ## Planned Software/Configuration
 
