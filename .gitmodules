@@ -1,0 +1,3 @@
+[submodule "Vendor/basebox-packer"]
+	path = Vendor/basebox-packer
+	url = https://github.com/jousch/basebox-packer
