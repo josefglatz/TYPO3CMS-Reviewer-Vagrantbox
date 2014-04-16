@@ -1,3 +1,7 @@
 ## PACKER
 /packer_cache/
 /.idea/
+
+/Development/Packer/cookbooks/
+
+/Development/Packer/Cheffile.lock
