@@ -4,6 +4,7 @@ Development Notes
 # Fedora
 
 - Generating Kickstart file from existing setup <http://forums.fedoraforum.org/showthread.php?t=209741>
+- Download infos <http://fedoraproject.org/de_CH/get-fedora#formats>
 
 # Provisioning
 
@@ -16,6 +17,7 @@ Development Notes
 - TYPO3 test site generator, will generate 'Introduction Package' sites for any range of TYPO3 versions. <https://github.com/Tuurlijk/Typo3Workbench>
 - A Vagrant file to get you up and running with TYPO3 in a few minutes. <https://github.com/irnnr/vagrant-typo3>
 - TYPO3 extension for building, validating and syntax checking Fluid and Extbase code <https://github.com/FluidTYPO3/builder>
+- Nice sample of a cookbook <https://github.com/joerocklin/chef-mariadb>
 
 # Backup
 
