@@ -1,4 +1,4 @@
-TYPO3CMS-Reviewer
+TYPO3CMS-Reviewer (WIP)
 =================
 
 This project tries to provide an easy & also quick way to review/debug/profile the TYPO3 CMS project.
