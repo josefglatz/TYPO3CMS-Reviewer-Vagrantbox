@@ -10,7 +10,11 @@ This project tries to provide an easy & also quick way to review/debug/profile t
 	- Fedora 20 template (project's default distribution)
 		- for VMware Fusion (Apple OS X)
 		- for Virtualbox (Apple OS X, Microsoft Windows, Linux)
-
+- Provisioning
+	- Shell
+		- take a look into ./Development/Packer/Template/fedora/script/*.sh
+	- chef-solo (The cookbooks a provided by Librarian-Chef)
+		- GraphicsMagick
 
 ## Planned Features (Test Environment)
 
