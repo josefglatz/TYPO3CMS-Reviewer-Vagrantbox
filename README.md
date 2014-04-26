@@ -15,6 +15,10 @@ This project tries to provide an easy & also quick way to review/debug/profile t
 		- take a look into ./Development/Packer/Template/fedora/script/*.sh
 	- chef-solo (The cookbooks a provided by Librarian-Chef)
 		- GraphicsMagick
+		- build-essential
+		- Git
+		- Sqlite
+		- Ruby
 
 ## Planned Features (Test Environment)
 

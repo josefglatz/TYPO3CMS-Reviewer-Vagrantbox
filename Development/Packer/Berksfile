@@ -1,13 +1,10 @@
-#!/usr/bin/env ruby
-#^syntax detection
+site :opscode
 
-site 'http://community.opscode.com/api/v1'
+# Base
+cookbook "build-essential", git: "https://github.com/opscode-cookbooks/build-essential"
 
-# cookbook 'apache2', '>= 1.0.0'
 
-# cookbook 'postgresql',
-#   :git => 'https://github.com/findsyou/cookbooks',
-#   :ref => 'postgresql-improvements'
+
 
 cookbook 'build-essential',
 	:git => 'https://github.com/opscode-cookbooks/build-essential'

@@ -18,6 +18,8 @@ Development Notes
 - A Vagrant file to get you up and running with TYPO3 in a few minutes. <https://github.com/irnnr/vagrant-typo3>
 - TYPO3 extension for building, validating and syntax checking Fluid and Extbase code <https://github.com/FluidTYPO3/builder>
 - Nice sample of a cookbook <https://github.com/joerocklin/chef-mariadb>
+- Cookbooks t3o <https://git.typo3.org/Teams/Server/Vagrant/Typo3Org.git/tree/HEAD:/cookbooks>
+- Librarian-Chef Info <https://github.com/applicationsonline/librarian-chef#how-to-use>
 
 # Backup
 

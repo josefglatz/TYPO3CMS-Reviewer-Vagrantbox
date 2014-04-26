@@ -22,7 +22,7 @@
 		],
 		"floppy_files": ["floppy/vmware9.k3.8rc4.patch", "floppy/vmware9.compat_mm.patch", "floppy/vmware9.k3.9.vmhgfs.patch", "floppy/vmhgfs-d_count-kernel-3.11-tools-9.6.0.patch"],
 		"shutdown_command": "echo 'vagrant'|sudo -S shutdown -h now",
-		"disk_size": 10140,
+		"disk_size": 40000,
 		"vmx_data": {
 			"memsize": "512",
 			"numvcpus": "1",
@@ -46,28 +46,57 @@
 			"<tab> linux text biosdevname=0 ks=http://{{ .HTTPIP }}:{{ .HTTPPort}}/ks.cfg<enter><enter>"
 		],
 		"shutdown_command": "echo 'vagrant'|sudo -S shutdown -h now",
-		"disk_size": 10140,
+		"disk_size": 40000,
 		"vboxmanage": [
 			["modifyvm", "{{.Name}}", "--memory", "512"],
 			["modifyvm", "{{.Name}}", "--cpus", "1"]
 		]
 	}],
-	"provisioners": [{
-		"type": "shell",
-		"environment_vars": [
-			"PROVISIONER={{user `provisioner`}}",
-			"PROVISIONER_VERSION={{user `provisioner_version`}}"
-		],
-		"execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
-		"scripts": [
-		  "script/base.sh",
-		  "script/vagrant.sh",
-		  "script/vmtools.sh",
-		  "script/provisioner.sh",
-		  "script/cleanup.sh",
-		  "script/zerodisk.sh"
-		]
-	}],
+	"provisioners": [
+		{
+			"type": "shell",
+			"environment_vars": [
+				"PROVISIONER={{user `provisioner`}}",
+				"PROVISIONER_VERSION={{user `provisioner_version`}}"
+			],
+			"execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
+			"scripts": [
+			  "script/base.sh",
+			  "script/vagrant.sh",
+			  "script/vmtools.sh",
+			  "script/provisioner.sh"
+			]
+		},
+		{
+			"type": "chef-solo",
+			"skip_install": true,
+			"cookbook_paths": ["../../cookbooks", "../../site-cookbooks"],
+			"run_list": [
+				"recipe[build-essential]",
+				"recipe[git]",
+				"recipe[environment::default]",
+				"recipe[sqlite]",
+				"recipe[graphicsmagick]"
+			],
+			"json": {
+				"mailcatcher": {
+					"http-ip": "127.0.0.1"
+				}
+			}
+		},
+		{
+			"type": "shell",
+			"environment_vars": [
+				"PROVISIONER={{user `provisioner`}}",
+				"PROVISIONER_VERSION={{user `provisioner_version`}}"
+			],
+			"execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
+			"scripts": [
+				"script/cleanup.sh",
+				"script/zerodisk.sh"
+			]
+		}
+	],
 	"post-processors": [{
 		"type": "vagrant",
 		"keep_input_artifact": false,
