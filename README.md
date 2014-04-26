@@ -3,6 +3,19 @@ TYPO3CMS-Reviewer (WIP)
 
 This project tries to provide an easy & also quick way to review/debug/profile the TYPO3 CMS project.
 
+## How to use
+
+1. Make sure you have installed Vagrant (<http://vagrantup.com>)
+2. Make sure you have installed at least Oracle VM VirtualBox (<https://www.virtualbox.org>)
+3. (Optional) For best performance use VMWare Fusion (on Mac) or VMWare Workstation (on Windows) (both are not free)
+4. Open folder in your suggested terminal
+5. Start your TYPO3CMS reviewer environment
+	1. <pre>vagrant up</pre> for VirtualBox (Mac/Linux/Windows).
+	2. <pre>vagrant up --provider vmware_fusion</pre> for VMware Fusion (Mac).
+	3. <pre>vagrant up --provider vmware_workstation</pre> for VMware Workstation (Win).
+
+TODO (This is not the final approach)
+
 
 ## Already solved Features/Tasks
 
@@ -19,6 +32,8 @@ This project tries to provide an easy & also quick way to review/debug/profile t
 		- Git
 		- Sqlite
 		- Ruby
+		- Apache2
+- Public cookbooks must be fetched with Berkshelf >= 3.0 (see NOTES.md HowTo section within Development/Packer folder)
 
 ## Planned Features (Test Environment)
 
@@ -54,10 +69,6 @@ This project tries to provide an easy & also quick way to review/debug/profile t
 	- easy execution of install/backup/restore scripts
 	- Mailcatcher link
 
-
-## How to use
-
-TODO
 
 
 ## Author
