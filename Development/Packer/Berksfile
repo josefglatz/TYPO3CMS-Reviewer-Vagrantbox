@@ -19,3 +19,15 @@ cookbook 'graphicsmagick',
 
 cookbook 'apache2'
 
+cookbook 'mysql',
+	:git => 'https://github.com/opscode-cookbooks/mysql'
+
+cookbook 'php'
+	#:git => 'https://github.com/opscode-cookbooks/php'
+
+cookbook 'chef-xhprof-gui',
+	:git => 'https://github.com/inviqa/chef-xhprof-gui'
+
+cookbook 'chef-php-extra',
+	:git => 'https://github.com/inviqa/chef-php-extra'
+

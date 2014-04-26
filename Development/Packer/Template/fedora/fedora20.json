@@ -76,11 +76,23 @@
 				"recipe[git]",
 				"recipe[environment::default]",
 				"recipe[sqlite]",
-				"recipe[graphicsmagick]"
+				"recipe[graphicsmagick]",
+				"recipe[apache2::default]",
+				"recipe[mysql]",
+				"recipe[mysql::server]",
+				"recipe[php]",
+				"recipe[database]",
+				"recipe[database::mysql]"
 			],
 			"json": {
 				"mailcatcher": {
 					"http-ip": "127.0.0.1"
+				},
+				"mysql": {
+					"server_root_password": "vagrant",
+					"server_debian_password": "vagrant",
+					"server_repl_password": "vagrant",
+					"allow_remote_root": true
 				}
 			}
 		},
