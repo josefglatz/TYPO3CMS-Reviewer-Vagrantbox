@@ -1,11 +1,6 @@
-site :opscode
+source "http://api.berkshelf.com"
 
 # Base
-cookbook "build-essential", git: "https://github.com/opscode-cookbooks/build-essential"
-
-
-
-
 cookbook 'build-essential',
 	:git => 'https://github.com/opscode-cookbooks/build-essential'
 
@@ -15,9 +10,12 @@ cookbook 'git',
 cookbook 'sqlite',
 	:git => 'https://github.com/opscode-cookbooks/sqlite'
 
-cookbook 'mailcatcher',
+cookbook 'MailCatcher',
 	:git => 'https://github.com/bryantebeek/chef-mailcatcher'
 
 cookbook 'graphicsmagick',
 	:git => 'https://github.com/jousch/chef-graphicsmagick',
 	:ref => 'v1.0.0'
+
+cookbook 'apache2'
+

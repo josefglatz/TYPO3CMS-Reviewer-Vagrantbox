@@ -70,7 +70,7 @@
 		{
 			"type": "chef-solo",
 			"skip_install": true,
-			"cookbook_paths": ["../../cookbooks", "../../site-cookbooks"],
+			"cookbook_paths": ["../../berks-cookbooks", "../../site-cookbooks"],
 			"run_list": [
 				"recipe[build-essential]",
 				"recipe[git]",
