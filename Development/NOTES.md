@@ -35,3 +35,10 @@ Development Notes
 # Fun/Unnecessary Stuff
 
 - <http://www.mewbies.com/how_to_customize_your_console_login_message_tutorial.htm>
+
+
+# HowTo
+
+- 'berks vendor' should fetching all needed cookbooks
+- 'make list' shows all the available packer templates
+- 'make vmware/fedora20-cheflatest.box' initiates the packer to build the basebox for e.g. vmware_desktop
