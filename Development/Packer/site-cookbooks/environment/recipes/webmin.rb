@@ -46,13 +46,16 @@ package "apt-show-versions" do
 	action :install
 end
 
+# Fetch & install GPG key
+bash "webmin-key" do
+	code "cd /tmp && wget http://www.webmin.com/jcameron-key.asc && sudo apt-key add jcameron-key.asc"
+end
+
 # Add Webmin APT repository (update is called )
 apt_repository 'webmin' do
 	uri "http://download.webmin.com/download/repository"
 	distribution "sarge"
 	components ["contrib"]
-	key 'http://www.webmin.com/jcameron-key.asc'
-	trusted true
 	action :add
 end
 
@@ -61,8 +64,6 @@ apt_repository 'webminmirror' do
 	uri "http://webmin.mirror.somersettechsolutions.co.uk/repository"
 	distribution "sarge"
 	components ["contrib"]
-	key 'http://www.webmin.com/jcameron-key.asc'
-	trusted true
 	action :add
 end
 
