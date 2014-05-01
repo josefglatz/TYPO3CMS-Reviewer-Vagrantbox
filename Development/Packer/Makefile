@@ -27,7 +27,7 @@ BOX_FILES := $(foreach builder, $(BUILDER_TYPES), $(foreach box_filename, $(BOX_
 RM = rm -f
 
 #vpath %.json Template/centos:Template/debian:Template/fedora:Template/freebsd:Template/opensuse:Template/oraclelinux:Template/osx:Template/ubuntu:Template/windows2008r2:Template/windows2012:Template/windows2012r2:Template/windows7:Template/windows8:Template/windows81
-vpath %.json Template/fedora:Template/ubuntu
+vpath %.json Template/ubuntu
 
 .PHONY: all
 all: $(BOX_FILES)
