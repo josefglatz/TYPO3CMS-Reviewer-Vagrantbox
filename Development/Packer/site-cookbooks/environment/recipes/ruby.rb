@@ -19,8 +19,7 @@
 
 
 case node[:platform]
-	when "redhat", "centos", "fedora"
-		package "ruby"
 	when "debian", "ubuntu"
-		package "ruby"
+		package "ruby1.9.1"
+		package "ruby1.9.1-dev"
 end
