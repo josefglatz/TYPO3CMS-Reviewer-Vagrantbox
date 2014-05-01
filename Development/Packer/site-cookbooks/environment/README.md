@@ -7,7 +7,7 @@ Requirements
 
 ### Platform
 
-Tested on Fedora
+Tested on Ubuntu but should also work with Debian
 
 ### Chef
 

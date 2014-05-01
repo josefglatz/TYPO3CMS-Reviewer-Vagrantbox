@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: environment
-# Recipe:: default
+# Recipe:: php
 #
 # Copyright 2014, Josef Florian Glatz <jousch@gmail.com>
 #
@@ -18,9 +18,9 @@
 #
 
 
-case node[:platform]
-	when "redhat", "centos", "fedora"
-		package "ruby"
-	when "debian", "ubuntu"
-		package "ruby"
-end
+# installing PEAR/PECL
+package "php-pear"
+
+#package "php-fpm"
+
+
