@@ -20,13 +20,14 @@ TODO (This is not the final approach)
 ## Already solved Features/Tasks
 
 - Initial Packer Configuration
-	- Fedora 20 template (project's default distribution)
+	- Ubuntu 14.04 template (project's default distribution)
 		- for VMware Fusion (Apple OS X)
-		- for Virtualbox (Apple OS X, Microsoft Windows, Linux)
+		- for VMware Workstation (Linux, Microsoft Windows)
+		- for Virtualbox (Apple OS X, Linux, Microsoft Windows)
 - Provisioning
 	- Shell
-		- take a look into ./Development/Packer/Template/fedora/script/*.sh
-	- chef-solo (The cookbooks a provided by Librarian-Chef)
+		- some basic (well known) shell scripts to setup the vagrant environment (take a look into ./Development/Packer/Template/ubuntu/script/*.sh for details)
+	- chef-solo
 		- GraphicsMagick
 		- build-essential
 		- Git
@@ -45,7 +46,7 @@ TODO (This is not the final approach)
 		- (VMware Workstation (Windows) *currently not on my agenda*
 	- _DONE_ included Packer Configuration file(s) (if you want to create custom boxes)
 	- included Chef Cookbooks (each of them as standalone git-repo)
-	- _DONE_ Fedora Linux as default
+	- _DONE_ Ubuntu Linux as default
 
 ## Planned Software/Configuration
 
@@ -77,4 +78,4 @@ Josef Florian Glatz <http://jousch.com>
 
 ## Sponsors & nice websites
 
-- [TYPO3Blog.at](http://typo3blog.at)
+- [typo3blog.at](http://typo3blog.at)
