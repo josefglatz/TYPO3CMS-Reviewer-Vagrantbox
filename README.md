@@ -71,6 +71,14 @@ TODO (This is not the final approach)
 	- Mailcatcher link
 
 
+## Notes
+
+### MailCatcher
+
+All emails sent by PHP are intercepted by MailCatcher. So normally no email would be delivered outside of the virtual machine. Instead you can check messages using web frontend for MailCatcher, which is running on port 1080 and also available on every domain:
+
+	http://<guest-ip>:1080
+
 
 ## Author
 
