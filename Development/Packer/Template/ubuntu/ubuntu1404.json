@@ -103,6 +103,7 @@
 			"run_list": [
 				"recipe[environment::webmin]",
 				"recipe[environment::misc]",
+				"recipe[environment::motd]",
 				"recipe[build-essential]",
 				"recipe[git]",
 				"recipe[environment::ruby]",
