@@ -115,6 +115,8 @@
 				"recipe[database]",
 				"recipe[database::mysql]"
 
+				"recipe[MailCatcher]",
+				"recipe[environment::mailcatcher]"
 			],
 			"json": {
 				"mysql": {
@@ -125,6 +127,9 @@
 				},
 				"php": {
 					"directives": {}
+				},
+				"mailcatcher": {
+					"http-ip": "0.0.0.0"
 				}
 			}
 		},
