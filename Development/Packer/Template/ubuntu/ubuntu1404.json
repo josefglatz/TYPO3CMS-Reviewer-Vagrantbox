@@ -102,6 +102,7 @@
 			"cookbook_paths": ["../../berks-cookbooks", "../../site-cookbooks"],
 			"run_list": [
 				"recipe[environment::webmin]",
+				"recipe[environment::misc]",
 				"recipe[build-essential]",
 				"recipe[git]",
 				"recipe[environment::ruby]",
