@@ -17,17 +17,24 @@ cookbook 'graphicsmagick',
 	:git => 'https://github.com/jousch/chef-graphicsmagick',
 	:ref => 'v1.0.0'
 
-cookbook 'apache2'
+cookbook 'nginx'
+	#:git => 'https://github.com/opscode-cookbooks/nginx'
 
-cookbook 'mysql',
-	:git => 'https://github.com/opscode-cookbooks/mysql'
+cookbook 'mysql'
+	#:git => 'https://github.com/opscode-cookbooks/mysql'
 
 cookbook 'php'
 	#:git => 'https://github.com/opscode-cookbooks/php'
 
-cookbook 'chef-xhprof-gui',
-	:git => 'https://github.com/inviqa/chef-xhprof-gui'
+cookbook 'database'
+	#:git => 'https://github.com/opscode-cookbooks/database'
 
-cookbook 'chef-php-extra',
-	:git => 'https://github.com/inviqa/chef-php-extra'
+#cookbook 'chef-xhprof-gui',
+#	:git => 'https://github.com/inviqa/chef-xhprof-gui'
+
+#cookbook 'chef-php-extra',
+#	:git => 'https://github.com/inviqa/chef-php-extra'
+
+cookbook 'composer',
+	:git => 'https://github.com/escapestudios-cookbooks/composer'
 
