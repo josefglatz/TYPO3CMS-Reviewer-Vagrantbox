@@ -21,6 +21,10 @@ Development Notes
 - Cookbooks t3o <https://git.typo3.org/Teams/Server/Vagrant/Typo3Org.git/tree/HEAD:/cookbooks>
 - Librarian-Chef Info <https://github.com/applicationsonline/librarian-chef#how-to-use>
 
+# Provisioning (Debian, Ubuntu)
+
+- Really simple lamp vagrant box with debian <https://github.com/r8/vagrant-lamp/>
+
 # Backup
 
 - A SH script to backup any TYPO3 website <https://github.com/Apen/TYPO3-backup>
@@ -36,6 +40,9 @@ Development Notes
 
 - <http://www.mewbies.com/how_to_customize_your_console_login_message_tutorial.htm>
 
+# Webmin
+
+- Theme based on Bootstrap (e.g. in future) <http://theme.winfuture.it>
 
 # HowTo
 
