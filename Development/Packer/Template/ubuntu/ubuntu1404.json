@@ -113,12 +113,10 @@
 				"recipe[nginx]",
 				"recipe[mysql::server]",
 				"recipe[php]",
-				"recipe[environment::php]",
+				"recipe[MailCatcher]",
+				"recipe[environment::mailcatcher]",
 				"recipe[database]",
 				"recipe[database::mysql]"
-
-				"recipe[MailCatcher]",
-				"recipe[environment::mailcatcher]"
 			],
 			"json": {
 				"mysql": {
