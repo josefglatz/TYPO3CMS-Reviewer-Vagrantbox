@@ -3,38 +3,46 @@ TYPO3CMS-Reviewer (WIP)
 
 This project tries to provide an easy & also quick way to review/debug/profile the TYPO3 CMS project.
 
-## How to use
+## Requirements
 
 1. Make sure you have installed Vagrant (<http://vagrantup.com>)
-2. Make sure you have installed at least Oracle VM VirtualBox (<https://www.virtualbox.org>)
-3. (Optional) For best performance use VMWare Fusion (on Mac) or VMWare Workstation (on Windows) (both are not free)
-4. Open folder in your suggested terminal
+2. Make sure you have installed at least one provider
+	1. Oracle VM VirtualBox (Linux, Mac, Windows) (<https://www.virtualbox.org>)
+	2. VMware Fusion (Mac) (this is my prefered provider, because it's much faster than VirtualBox)
+	3. VMware Workstation (Linux, Windows) (this is my prefered provider, because it's much faster than VirtualBox)
+
+## How to use
+
+
+4. Cd to project's root in your suggested terminal where you have cloned this repository
 5. Start your TYPO3CMS reviewer environment
 	1. <pre>vagrant up</pre> for VirtualBox (Mac/Linux/Windows).
 	2. <pre>vagrant up --provider vmware_fusion</pre> for VMware Fusion (Mac).
-	3. <pre>vagrant up --provider vmware_workstation</pre> for VMware Workstation (Win).
+	3. <pre>vagrant up --provider vmware_workstation</pre> for VMware Workstation (Linux/Win).
 
 TODO (This is not the final approach)
 
+HowTo set default vagrant provider <https://docs.vagrantup.com/v2/providers/default.html>
 
-## Already solved Features/Tasks
 
-- Initial Packer Configuration
-	- Ubuntu 14.04 template (project's default distribution)
-		- for VMware Fusion (Apple OS X)
-		- for VMware Workstation (Linux, Microsoft Windows)
-		- for Virtualbox (Apple OS X, Linux, Microsoft Windows)
-- Provisioning
-	- Shell
-		- some basic (well known) shell scripts to setup the vagrant environment (take a look into ./Development/Packer/Template/ubuntu/script/*.sh for details)
-	- chef-solo
-		- GraphicsMagick
-		- build-essential
-		- Git
-		- Sqlite
-		- Ruby
-		- Apache2
-- Public cookbooks must be fetched with Berkshelf >= 3.0 (see NOTES.md HowTo section within Development/Packer folder)
+## What's inside
+
+For building you own Vagrantbox the whole Packer configuration is included (for:)
+
+- Ubuntu 14.04 (project's default distribution)	(Public cookbooks must be fetched with Berkshelf >= 3.0)
+	- for VMware Fusion (Apple OS X)
+	- for VMware Workstation (Linux, Microsoft Windows)
+	- for Virtualbox (Apple OS X, Linux, Microsoft Windows)
+
+Installed software:
+
+- Webmin (Web based administration interface for linux noobs)
+- MailCatcher.Me (which runs a super simple SMTP server which catches any message sent to it to display in a web interface.)
+- Git
+- Ruby
+- Composer (installed globally)
+- GraphicsMagick ("required" by TYPO3)
+- MySql Database Server
 
 ## Planned Features (Test Environment)
 
@@ -50,15 +58,16 @@ TODO (This is not the final approach)
 
 ## Planned Software/Configuration
 
-- Apache or Nginx
-- MySQL or MariaDB
+- _DONE_ Apache or Nginx
+- _DONE_ MySQL or MariaDB
 - Constantly up2date PHP version
-- Mailcatcher (http://mailcatcher.me) to easily catch sent mails
+- _DONE_ Mailcatcher (http://mailcatcher.me) to easily catch sent mails
 - Support for Umlaute (filesystem)
 - XDebug (preconfigured for remote debugging especially with JetBrains PhpStorm)
 - Xhprof
 - phpmd
 - phpcs (PHP Codesniffer)
+- Globales PhpMyAdmin/Adminer
 
 ## Planned Features (TYPO3 specific)
 
@@ -73,12 +82,19 @@ TODO (This is not the final approach)
 
 ## Notes
 
+### Webmin
+
+Webmin is a web-based interface for system administration for Unix. Especially for those who don't love working with the console.
+
 ### MailCatcher
 
 All emails sent by PHP are intercepted by MailCatcher. So normally no email would be delivered outside of the virtual machine. Instead you can check messages using web frontend for MailCatcher, which is running on port 1080 and also available on every domain:
 
 	http://<guest-ip>:1080
 
+### Composer
+
+Composer binary is installed globally (to `/usr/local/bin`), so you can simply call `composer` from any directory.
 
 ## Author
 
